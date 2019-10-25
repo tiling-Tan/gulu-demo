@@ -2,7 +2,7 @@
 
 作者：VisionTan
 
-##使用本框架前请在CSS中开启border-box
+## 使用本框架前请在CSS中开启border-box
 ```
 *{
     box-sizing:border-box;
