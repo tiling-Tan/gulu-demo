@@ -22,6 +22,7 @@
             --color: #333;
             --border-color: #999;
             --border-color-hover: #666;
+
         }
 
         #app {
@@ -53,11 +54,15 @@
     <g-button icon="setting" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
         按钮
     </g-button>
-    <g-icon name="download"></g-icon>
+    <g-button-group>
+        <g-button icon="left">上一页</g-button>
+        <g-button icon="right" icon-position="right">下一页</g-button>
+    </g-button-group>
+
 </div>
 
 
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1474919_dgfxhhc9048.js"></script>
+<script src="//at.alicdn.com/t/font_1474919_wdqxyy0iy2.js"></script>
 </body>
 </html>
