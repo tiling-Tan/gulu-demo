@@ -91,6 +91,7 @@ chai.use(spies)
 }
 //测试click
 {
+    //mock
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData:{
@@ -98,11 +99,9 @@ chai.use(spies)
         }
     })
     vm.$mount()
-    vm.$on('click',function () {
-        expect(1).to.eq(1)
-    })
+    let spy = chai.spy(function () {})
+    vm.$on('click',spy)
     let button = vm.$el
-
-    vm.$el.remove()
-    vm.$destroy()
+    button.click()
+    expect(spy).to.have.been.callen()
 }
