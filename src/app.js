@@ -103,5 +103,5 @@ chai.use(spies)
     vm.$on('click',spy)
     let button = vm.$el
     button.click()
-    expect(spy).to.have.been.callen()
+    expect(spy).to.have.been.called()
 }
