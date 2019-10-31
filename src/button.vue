@@ -12,7 +12,7 @@
 <script>
     import icon from './icon'
     export default {
-        name: "button",
+        name: "GuluButton",
         //props:['icon','iconPosition']
         props:{
             icon:{},
