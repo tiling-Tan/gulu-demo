@@ -30,16 +30,25 @@
             }
 
         },
+        methods:{
+            creatClasses(obj,str=''){
+                if(!obj){return []}
+                let array = []
+                if(obj.span){array.push(`col-${str}${obj.span}`)}
+                if(obj.offset){array.push(`offset-${str}${obj.offset}`)}
+                return array
+            }
+        },
         computed: {
             colClass() {
                 let {span, offset,ipad,narrowPc,pc,widePc} = this
+                let createClasses = this.creatClasses
                 return [
-                    span && `col-${span}`,
-                    offset && `offset-${offset}`,
-                    ...[ipad && `col-ipad-${ipad.span}`],
-                    ...[narrowPc && `col-narrowPc-${narrowPc.span}`],
-                    ...[pc && `col-pc-${pc.span}`],
-                    ...[widePc && `col-widePc-${widePc.span}`]
+                    ...createClasses({span,offset}),
+                    ...createClasses(ipad,'ipad-'),
+                    ...createClasses(narrowPc,'narrow-pc-'),
+                    ...createClasses(pc,'pc-'),
+                    ...createClasses(widePc,'wide-pc-')
                 ]
             },
             colStyle() {
@@ -76,12 +85,24 @@
                     width: ($n / 24)*100%;
                 }
             }
+            $class-perfix: offset-ipad-;
+            @for $n from 1 through 24 {
+                &.#{$class-perfix}#{$n} {
+                    margin-left: ($n / 24)*100%;
+                }
+            }
         }
         @media (min-width: 769px) {
-            $class-perfix: col-narrowPc-;
+            $class-perfix: col-narrow-pc-;
             @for $n from 1 through 24 {
                 &.#{$class-perfix}#{$n} {
                     width: ($n / 24)*100%;
+                }
+            }
+            $class-perfix: offset-narrow-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-perfix}#{$n} {
+                    margin-left: ($n / 24)*100%;
                 }
             }
         }
@@ -92,12 +113,24 @@
                     width: ($n / 24)*100%;
                 }
             }
+            $class-perfix: offset-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-perfix}#{$n} {
+                    margin-left: ($n / 24)*100%;
+                }
+            }
         }
         @media (min-width: 1201px){
-            $class-perfix: col-widePc-;
+            $class-perfix: col-wide-pc-;
             @for $n from 1 through 24 {
                 &.#{$class-perfix}#{$n} {
                     width: ($n / 24)*100%;
+                }
+            }
+            $class-perfix: offset-wide-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-perfix}#{$n} {
+                    margin-left: ($n / 24)*100%;
                 }
             }
         }
