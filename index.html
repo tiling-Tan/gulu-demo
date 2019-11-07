@@ -26,121 +26,19 @@
         }
 
         #app {
-            /*margin: 20px;*/
+
         }
 
         body {
             font-size: var(--font-size);
         }
     </style>
-    <style>
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-        /*.box{*/
-        /*    margin: 20px;*/
-        /*}*/
-    </style>
+
 </head>
 <body>
-<style>
-    .sider{
-        background: #333333;
-        width: 180px;
-    }
-    .sider.slide-enter, .sider.slide-leave-to  {
-        margin-left: -180px;
-    }
-    .header{
-        height: 100px;
-        background: #999999;
-    }
-    .footer{
-        height: 100px;
-        background: #999999;
-    }
-</style>
+
 <div id="app">
-    <g-layout style="height: 100vh">
-        <g-sider>sider</g-sider>
-        <g-layout>
-            <g-header>header</g-header>
-            <g-content>content</g-content>
-            <g-footer>footer</g-footer>
-        </g-layout>
-    </g-layout>
-<!--    <div style="border: 1px solid black">-->
-<!--        <g-row gutter="20">-->
-<!--            <g-col>1</g-col>-->
-<!--            <g-col>2</g-col>-->
-<!--        </g-row>-->
-<!--        <g-row gutter="20">-->
-<!--            <g-col>1</g-col>-->
-<!--            <g-col>2</g-col>-->
-<!--            <g-col>3</g-col>-->
-<!--        </g-row>-->
-<!--        <g-row gutter="20">-->
-<!--            <g-col :span="24"-->
-<!--                   :ipad="{span:8}"-->
-<!--                   :narrowPc="{span:4}"-->
-<!--                   :pc="{span:2}"-->
-<!--                   :widePc="{span:1}"-->
-<!--            >11-->
-<!--            </g-col>-->
-<!--            <g-col :span="24"-->
-<!--                   :ipad="{span:16}"-->
-<!--                   :narrowPc="{span:20}"-->
-<!--                   :pc="{span:22}"-->
-<!--                   :widePc="{span:23}"-->
-<!--            >11-->
-<!--            </g-col>-->
-<!--        </g-row>-->
-<!--        <g-row gutter="20">-->
-<!--            <g-col :span="4"></g-col>-->
-<!--            <g-col :span="16"></g-col>-->
-<!--            <g-col :span="4"></g-col>-->
-<!--        </g-row>-->
-<!--        <g-row gutter="20">-->
-<!--            <g-col :span="4"></g-col>-->
-<!--            <g-col :span="20"></g-col>-->
-<!--        </g-row>-->
-<!--        <g-row gutter="20">-->
-<!--            <g-col :span="4"></g-col>-->
-<!--            <g-col :span="10"></g-col>-->
-<!--            <g-col :span="10"></g-col>-->
-<!--        </g-row>-->
-<!--    </div>-->
-<!--    <div class="box">-->
-<!--        <g-button :loading="loading1" @click="loading1 = !loading1">-->
-<!--            按钮-->
-<!--        </g-button>-->
-<!--        <g-button icon="setting" :loading="loading2" @click="loading2 = !loading2">-->
-<!--            按钮-->
-<!--        </g-button>-->
-<!--        <g-button icon="setting" icon-position="right" :loading="loading3" @click="loading3 = !loading3">-->
-<!--            按钮-->
-<!--        </g-button>-->
-<!--        <g-button-group>-->
-<!--            <g-button icon="left">上一页</g-button>-->
-<!--            <g-button icon="right" icon-position="right">下一页</g-button>-->
-<!--        </g-button-group>-->
-<!--    </div>-->
-<!--    <div class="box">-->
-<!--        <g-input value="张三" disabled></g-input>-->
-<!--        <g-input value="李四" readonly></g-input>-->
-<!--        <g-input value="王五"></g-input>-->
-<!--    </div>-->
-<!--    <div class="box">-->
-<!--        <g-input v-model="msg"></g-input>-->
-<!--        {{msg}}-->
-<!--    </div>-->
-<!--    <div class="box">-->
-<!--        <g-input value="fang" error="姓名不能少于两个字"></g-input>-->
-<!--    </div>-->
+    <button @click="showToast">clickme</button>
 </div>
 
 
