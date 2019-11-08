@@ -38,7 +38,16 @@ new Vue({
     },
     created(){},
     methods:{
-        showToast(){
+        showToast1(){
+            this.showToast('top')
+        },
+        showToast2(){
+            this.showToast('middle')
+        },
+        showToast3(){
+            this.showToast('bottom')
+        },
+        showToast(position){
            this.$toast(`文字`,{
                closeButton: {
                    text:'close',
@@ -47,7 +56,7 @@ new Vue({
                    }
                },
                enableHtml:false,
-               position:'middle'
+               position
            })
         }
     }
