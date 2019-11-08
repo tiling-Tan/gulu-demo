@@ -39,7 +39,7 @@ new Vue({
     created(){},
     methods:{
         showToast(){
-           this.$toast('文字',{
+           this.$toast(`文字`,{
                closeButton: {
                    text:'close',
                    callback(){
