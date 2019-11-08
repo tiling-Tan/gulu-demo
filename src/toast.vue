@@ -7,7 +7,6 @@
             </div>
             <div class="line" ref="line"></div>
             <span class="close" v-if="closeButton" @click="onclickButton">{{closeButton.text}}</span>
-
         </div>
     </div>
 </template>
