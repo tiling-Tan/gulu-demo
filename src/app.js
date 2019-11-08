@@ -46,7 +46,8 @@ new Vue({
                        console.log('用户说他知道了！')
                    }
                },
-               enableHtml:false
+               enableHtml:false,
+               position:'middle'
            })
         }
     }
