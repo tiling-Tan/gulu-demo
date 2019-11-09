@@ -11,7 +11,16 @@
 
 <script>
     export default {
-        name: "GuluTabsHeader"
+        name: "GuluTabsHeader",
+        inject:['eventBus'],
+        mounted() {
+            this.eventBus.$on('update:selected',(item,vm)=>{
+                let{width,height,left,top} = vm.$el.getBoundingClientRect()
+                this.$refs.line.style.width = `${parseInt(width)}px`
+                console.log(parseInt(left));
+                this.$refs.line.style.left = `${parseInt(left)}px`
+            })
+        }
     }
 </script>
 
@@ -22,13 +31,12 @@
         display: flex;
         height: $height;
         justify-content: flex-start;
-        border: 1px solid red;
         position: relative;
         > .line {
             position: absolute;
             bottom: 0;
-            border-bottom: 3px solid $color;
-            width: 60px;
+            border-bottom: 1px solid $color;
+            transition: all .3s;
         }
 
         > .actions-wrapper {
