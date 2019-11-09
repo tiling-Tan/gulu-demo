@@ -17,7 +17,6 @@
             this.eventBus.$on('update:selected',(item,vm)=>{
                 let{width,height,left,top} = vm.$el.getBoundingClientRect()
                 this.$refs.line.style.width = `${parseInt(width)}px`
-                console.log(parseInt(left));
                 this.$refs.line.style.left = `${parseInt(left)}px`
             })
         }
@@ -27,11 +26,13 @@
 <style scoped lang="scss">
     $color:blue;
     $height: 40px;
+    $border-color:#ddd;
     .tabs-header {
         display: flex;
         height: $height;
         justify-content: flex-start;
         position: relative;
+        border-bottom: 1px solid $border-color;
         > .line {
             position: absolute;
             bottom: 0;
@@ -41,6 +42,10 @@
 
         > .actions-wrapper {
             margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1em;
         }
     }
 </style>
