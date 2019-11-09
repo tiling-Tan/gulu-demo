@@ -32,7 +32,17 @@
             }
         },
         mounted(){
-            this.eventBus.$emit('update:selected',this.selected)
+            this.$children.forEach((vm)=>{
+                if(vm.$options.name === 'GuluTabsHeader'){
+                    vm.$children.forEach((childVm)=>{
+                        console.log(childVm.$options.name)
+                        if(childVm.$options.name === 'GuluTabsItem' && childVm.name === this.selected){
+                            this.eventBus.$emit('update:selected',this.selected,childVm)
+                        }
+                    })
+                }
+            })
+
         }
     }
 </script>
