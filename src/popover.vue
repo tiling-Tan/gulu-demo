@@ -30,26 +30,29 @@
         methods: {
             positionContent() {
                 const {triggerWrapper, contentWrapper} = this.$refs
-                let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
                 document.body.appendChild(contentWrapper)
-                if (this.position === 'top') {
-                    contentWrapper.style.left = left + window.scrollX + 'px'
-                    contentWrapper.style.top = top + window.scrollY + 'px'
-                } else if (this.position === 'bottom') {
-                    contentWrapper.style.left = left + window.scrollX + 'px'
-                    contentWrapper.style.top = top + height + window.scrollY + 'px'
-                } else if (this.position === 'left') {
-                    contentWrapper.style.left = left + window.scrollX + 'px'
-                    const {height: contentHeight} = contentWrapper.getBoundingClientRect()
-                    contentWrapper.style.top = top - ((contentHeight - height) / 2) +
-                        window.scrollY + 'px'
-                } else if (this.position === 'right') {
-                    contentWrapper.style.left = left + width + window.scrollX + 'px'
-                    const {height: contentHeight} = contentWrapper.getBoundingClientRect()
-                    contentWrapper.style.top = top - ((contentHeight - height) / 2) +
-                        window.scrollY + 'px'
+                let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
+                const {height: contentHeight} = contentWrapper.getBoundingClientRect()
+                const position = {
+                    top: {
+                        top: top + window.scrollY,
+                        left: left + window.scrollX
+                    },
+                    bottom: {
+                        top: top + height + window.scrollY,
+                        left: left + window.scrollX
+                    },
+                    left: {
+                        top: top - ((contentHeight - height) / 2) + window.scrollY,
+                        left: left + window.scrollX
+                    },
+                    right: {
+                        top: top - ((contentHeight - height) / 2) + window.scrollY,
+                        left: left + width + window.scrollX
+                    }
                 }
-
+                contentWrapper.style.left = position[this.position].left + 'px'
+                contentWrapper.style.top = position[this.position].top + 'px'
             },
             onClickDocument(e) {
                 if (this.$refs.popover &&
@@ -166,6 +169,7 @@
 
         &.position-right {
             margin-left: 10px;
+
             &::before, &::after {
                 top: 50%;
                 right: 100%;
