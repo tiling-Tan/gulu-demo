@@ -40,8 +40,9 @@
 <div id="app" style="margin: 150px;">
     <div style="overflow:hidden;padding: 5px;">
         <g-popover position="bottom">
-            <template slot="content">
+            <template slot="content" slot-scope="{close}">
                 <div>popover内容</div>
+                <g-button @click="close">关闭</g-button>
             </template>
             <g-button>点我</g-button>
         </g-popover>
@@ -64,7 +65,7 @@
             <g-button>点我</g-button>
         </g-popover>
     </div>
-    <div style="overflow:hidden;padding: 50px 5px;">
+    <div style="overflow:hidden;padding:100px 5px;">
         <g-popover position="bottom" trigger="hover">
             <template slot="content">
                 <div>popover内容</div>
