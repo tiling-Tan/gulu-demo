@@ -46,7 +46,7 @@ Vue.use(Plugin)
 new Vue({
     el:'#app',
     data:{
-        selectedTab:'sports'
+        selectedTab:'1'
     },
     created(){},
     methods:{
