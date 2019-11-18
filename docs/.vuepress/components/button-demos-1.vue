@@ -4,9 +4,7 @@
         <g-button icon="setting">默认样式</g-button>
         <g-button loading>默认样式</g-button>
         <g-button disabled>默认样式</g-button>
-        <pre>
-        <code>{{content}}</code>
-        </pre>
+        <pre><code>{{content}}</code></pre>
     </div>
 
 </template>
@@ -24,7 +22,7 @@
 <g-button>默认样式</g-button>
 <g-button icon="setting">默认样式</g-button>
 <g-button loading>默认样式</g-button>
-<g-button disabled>默认样式</g-button>`
+<g-button disabled>默认样式</g-button>`.trim()
             }
         }
     }

@@ -1,0 +1,11 @@
+.cache
+.idea
+docs/
+false/
+node_modules/
+src/app.js
+/test/
+.travis.yml
+deploy.sh
+index.html
+karma.conf.js

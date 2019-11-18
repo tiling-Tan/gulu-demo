@@ -86,7 +86,7 @@
 
         .content {
             padding: 8px;
-            color: red;
+            color: blue;
         }
     }
 </style>

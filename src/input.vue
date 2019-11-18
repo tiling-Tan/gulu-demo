@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" :class="{error}">
+    <div class="gulu-toast" :class="{error}">
         <input :value="value" type="text" :disabled="disabled"
                :readonly="readonly"
                @change="$emit('change',$event.target.value)"
@@ -47,7 +47,7 @@
     $font-size:12px;
     $box-shadow-color:rgba(0,0,0,0.5);
     $red:#F1453D;
-    .wrapper{
+    .gulu-toast{
         font-size: $font-size;display: inline-flex;align-items: center;
         >:not(:last-child){margin-right: .5em;}
         >input{
