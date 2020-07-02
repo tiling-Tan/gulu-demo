@@ -7,7 +7,8 @@ module.exports = {
         repoLabel: 'GitHub',
         nav: [
             {text: '首页', link: '/'},
-            {text: '组件', link: '/components/button.md'}
+            {text: '组件', link: '/components/button.md'},
+            {text: 'npm', link: 'https://www.npmjs.com/package/vision-test-1-1'},
         ],
         sidebar: [
             {
