@@ -1,3 +1,17 @@
-# Twheels UI官网
-Twheels 是一个基于Vue的UI组件库，提供了Button、input输入框、Grid、layout、popover、tabs等常用组件，适合移动端和PC端使用，更多组件及样式还在开发中，敬请期待……
+---
+home: true
+heroImage: /homepage.png
+heroText: 网站快速成型工具
+tagline: Twheels UI ，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库
+actionText: 快速上手 →
+actionLink: /get-started/
+features:
+- title: 简洁至上
+  details: 设计简洁直观的操作流程，帮助产品设计人员搭建逻辑清晰、结构合理且高效易用的产品。
+- title: Vue驱动
+  details: 享受 Vue + parcel 的开发体验，实践最流行的技术。
+- title: 自动化测试
+  details: 采用 Karma + Mocha + Chai 做自动化测试，运行 npm run dev-test 即可实时测试代码。
+footer: MIT Licensed | Copyright © 2020-present 谭题伶
+---
 
